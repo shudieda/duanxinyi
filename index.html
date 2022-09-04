@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="/weixin-zi/js/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+
+        }
+    </style>
+    <style>
+        .huakuai {
+
+            height: 1589px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .box {
+            width: 1080px;
+            overflow: hidden;
+        }
+        .bbox {
+            width: 1080px;
+            overflow: hidden;
+            height: 2280px;
+        }
+        .huakuai::-webkit-scrollbar {
+            display: none;
+        }
+
+        .huakuai::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+            border-radius: 0px;
+            background: rgb(171, 171, 171);
+            scrollbar-arrow-color: rgb(171, 171, 171)
+        }
+        @font-face {
+            font-family: 方正兰亭准黑简体;
+            src: url("ziti/FZLTZHUNHJW.ttf");
+        }
+
+        .sc{
+            opacity: 0;
+        }
+
+        .sc:hover{
+            opacity: 1;
+        }
+
+        .dxy:hover {
+            background-image: url('tutu/dxyx.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 450px;
+            height: 219px;
+            z-index: 9999;
+        }
+        .dxy img:hover{
+            opacity: 0;
+        }
+        .dxe:hover {
+            background-image: url('tutu/dxex.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 450px;
+            height: 219px;
+            z-index: 9999;
+        }
+        .dxe img:hover{
+            opacity: 0;
+        }
+        .dxs:hover {
+            background-image: url('tutu/dxsx.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 450px;
+            height: 219px;
+            z-index: 9999;
+        }
+        .dxs img:hover{
+            opacity: 0;
+        }
+        .dxsi:hover {
+            background-image: url('tutu/dxsix.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 450px;
+            height: 219px;
+            z-index: 9999;
+        }
+        .dxsi img:hover{
+            opacity: 0;
+        }
+    </style>
+
+    <script type="js/jquery.min.js"></script>
+</head>
+<body oncontextmenu=self.event.returnValue=false style="background-color: rgb(218,185,149)">
+<button class="save-img" style="position: absolute; font-weight:550;color:rgb(218,185,149);background-color:rgb(218,185,149);border:none;margin-left:2000px;margin-top:30px;font-size: 40px;"> 保存图片</button>
+<div class="bbox">
+    <div style="border-bottom:1px solid rgb(114,114,114);background-color:rgb(255,255,255);height:247px;width:1080px;">
+        <img src="tutu//dx-sc/5.png" style="margin-top:141px;margin-left: -895px;">
+
+        <div contenteditable class="dm"
+               style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:50px;border:none;margin-top: 127px;margin-left:100px; width:885px;height: 55px; background-color:transparent;float: left;clear: both;color: rgb(14,14,14);"
+               type="text"
+               name="text"
+             value="">中国银行</div>
+        <div contenteditable class="dm"
+               style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: -20px;margin-left:100px; width:885px;height: 55px; background-color:transparent;color: rgb(99,99,99);"
+               type="text"
+               name="text"
+             value="">95566</div>
+        <img src="tutu/dx-sc/7.png" style="display: inline-block;margin-top:-90px;margin-left:945px;float: left;">
+
+    </div>
+    <div id="mydiv" class="huakuai"
+         style="position: relative;display: inline-block;background-color: rgb(240,240,240);height: 1874px;width: 1080px;border-bottom: 1px solid rgb(210,210,210);margin-bottom: -5px;flex-direction: column;">
+        <div class="box" id="container"></div>
+
+
+
+    </div>
+    <div style="background-color:rgb(247,247,247);height: 155px;width: 1080px;">
+        <img src="tutu/dx-sc/6.png">
+    </div>
+</div>
+
+<div class="function-box"
+     style="background-color: rgb(218,185,149);height: 2280px;width: 600px;margin-left: 1300px;margin-top: -2000px;">
+
+        <div class="function-item">
+            <button class="dh" type="button"
+                    style="margin-bottom:30px;font-weight:550;color:;background-color:transparent;border-radius:10px;margin-left:100px;margin-top:-40px;font-size: 50px;"
+            >添加对话
+            </button>
+            <hr style="margin-bottom: 30px;">
+            <!-- 插入重点文字 -->
+
+                <label style="font-size: 50px;margin-left: px;">
+                    文字 :<input style="font-size: 50px;" type="text" placeholder="点击编辑需要变色文字内容" class="key-words" style="height: 50px;font-size: 50px;">
+                </label>
+                <label style="font-size: 50px;margin-left: px;">
+                    颜色 :<input style="font-size: 50px;width: 200px;height: 50px;" type="color" class="key-color" value="#5B6B92">
+                </label>
+                <div>
+                    <label style="font-size: 50px;margin-left: px;">
+                        有下划线
+                        <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="underline">
+                    </label>
+                    <label style="font-size: 50px;margin-left: px;margin-bottom: 10px;">
+                        无下划线
+                        <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="none" checked>
+                    </label>
+                </div>
+                <button style="color: white;margin-bottom:5px;padding:5px 5px 5px 5px;font-weight:550;background-color: #333333;border-radius:10px;margin-left:px; font-size: 50px;" type="button" class="key-button">在光标处插入文字</button>
+
+            <!-- 保存图片 -->
+            <div class="function-item">
+
+            </div>
+            <div style="margin-top: 50px;font-size: 50px;">点击添加对话，出现内容后点击文字即可修改！</div>
+            <div style="margin-top: 50px;font-size: 50px;">删除对话在内容右上角，鼠标移动到附近会自动显示！</div>
+
+            <hr>
+
+
+    </div>
+
+</div>
+
+<div style="position: absolute;left:2380px;top:150px;width: 500px;height: 2000px;">
+
+
+    <a class="dxy" href="http://sblaojiaoshu.com/duanxinyi/" style="position: absolute; top:-50px;left: 20px;">
+        <img src="tutu/dxyx.png" style="width: 450px; height: 219px;">
+    </a>
+
+    <a class="dxe" href="http://sblaojiaoshu.com/duanxiner/" style="position: absolute; top:150px;left: 20px;">
+        <img src="tutu/dxe.png" style="width: 450px; height: 219px;">
+    </a>
+
+    <a class="dxs" href="http://sblaojiaoshu.com/duanxinsan/" style="position: absolute; top:350px;left: 20px;">
+        <img src="tutu/dxs.png" style="width: 450px; height: 219px;">
+    </a>
+
+    <a class="dxsi" href="http://sblaojiaoshu.com/duanxinsi/" style="position: absolute; top:550px;left: 20px;">
+        <img src="tutu/dxsi.png" style="width: 450px; height: 219px;">
+    </a>
+
+
+</div>
+
+<script src="emoji.js"></script>
+<!-- 引入 html2canvas -->
+<script src="html2canvas.js"></script>
+<!-- 引入自行封装的截图插件 -->
+<script src="screen-shot.js"></script>
+
+<script type="text/javascript">
+
+    var add = document.querySelector('.dh');
+    var container = document.getElementById('container');
+    var node = container.nextSibling;
+    add.onclick = function () {
+        oDiv = document.createElement('div');
+        oDiv.innerHTML = " <div>\n" +
+            "            <div contenteditable class=\"dm\"\n" +
+            "                   style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:30px;border:none;margin-top: 55px;margin-left:79px; width:320px;height: 55px; background-color:transparent;color: rgb(99,99,99);\"\n" +
+            "                   type=\"text\"\n" +
+            "                   name=\"text\"\n" +
+            "                   value=\"\">8月20日 10:23</div>\n" +
+            "            <div style=\"background-color: rgb(96,133,255);height: 143px;width: 826px;margin-left: 61px;margin-top: 21px;border-top-right-radius: 10px;border-top-left-radius: 10px;\">\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:40px;border:none;margin-top: 45px;margin-left:35px; width:400px;height: 55px; background-color:transparent;color: rgb(255,255,255);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">银行卡交易</div>\n" +
+            "            </div>\n" +
+            "            <div style=\"background-color: rgb(255,255,255);height: 510px;width: 826px;margin-left: 61px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;float: left;clear: both;\">\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: 48px;margin-left:35px; width:100px;height: 55px; background-color:transparent;color: rgb(141,140,148);display: block;\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">金额</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:60px;border:none;margin-top: 16px;margin-left:35px; width:700px;height: 55px; background-color:transparent;color: rgb(14,14,14);display: block;\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">10000.00</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: 26px;margin-left:35px; width:150px;height: 55px; background-color:transparent;color: rgb(141,140,148);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">账号</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: 26px;margin-left:249px; width:200px;height: 55px; background-color:transparent;color: rgb(141,140,148);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">类型</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: px;margin-left:35px; width:300px;height: 55px; background-color:transparent;color: rgb(14,14,14);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">储蓄卡*6666</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top:px ;margin-left:99px; width:250px;height: 55px; background-color:transparent;color: rgb(14,14,14);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">转账收入</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: 26px;margin-left:35px; width:250px;height: 55px; background-color:transparent;color: rgb(141,140,148);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">活期余额</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: 26px;margin-left:149px; width:200px;height: 55px; background-color:transparent;color: rgb(141,140,148);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">时间</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: px;margin-left:35px; width:350px;height: 55px; background-color:transparent;color: rgb(14,14,14);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">10000.00元</div>\n" +
+            "                <div contenteditable class=\"dm\"\n" +
+            "                       style=\"display: inline-block; font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: px;margin-left:49px; width:350px;height: 55px; background-color:transparent;color: rgb(14,14,14);\"\n" +
+            "                       type=\"text\"\n" +
+            "                       name=\"text\"\n" +
+            "                       value=\"\">8月20日 10时23分</div>\n" +
+            "            </div>\n" +
+            "        <input class='sc' style='font-size:40px;vertical-align:middle;margin-top:-250px;margin-left: -100px;width:100px;height: 60px;' type='button' onclick='test(this)' value='删除'/></div>";
+        container.parentNode.insertBefore(oDiv, node)
+        node = oDiv.nextSibling;
+
+    }
+
+    function test(test) {
+        test.parentNode.parentNode.removeChild(test.parentNode);
+    }
+
+    // -------------  保存图片
+
+    // 获取保存按钮
+    let saveImg = document.querySelector('.save-img')
+
+    // 点击保存按钮
+    saveImg.addEventListener('click', () => {
+        saveImgFn('图片')
+    })
+
+    // // 自动保存图片 10 秒一次
+    // setInterval(() => {
+    //     saveImgFn('自动保存')
+    // }, 1000000000)
+
+    // 保存图片的方法
+    async function saveImgFn(downloadName) {
+        // 获取需要转换的dom
+        // html2canvas(document.querySelector('.bbx'))
+        //     .then(canvas => {
+        //         let imgUrl = canvas.toDataURL('image/jpg')
+        //         let image = document.createElement('img')
+        //         image.src = imgUrl
+        //         let a = document.createElement('a')
+        //         a.href = imgUrl
+        //         a.download = name // 自定义名称
+        //         a.click()
+        //     })
+
+        // 截图模块
+        let canvasBox = document.querySelector('.bbox')
+        // 使用自定义方法进行转换
+        await getHtmlImage({canvasBox,downloadName})
+
+    }
+
+    // -------------  在所选位置插入重点文字
+
+
+    // 获取 按钮
+    let keyBtn = document.querySelector('.key-button')
+
+    // 点击插入重点文字
+    keyBtn.addEventListener('click', () => {
+        // 获取 文字
+        let keyWords = document.querySelector('.key-words')
+        // 获取 颜色
+        let keyColor = document.querySelector('.key-color')
+        // 获取 下划线
+        let keyCheckbox = document.querySelector('.key-checkbox:checked')
+
+        // 插入文字
+        insertSpan({
+            text: keyWords.value,
+            color: keyColor.value,
+            underline: keyCheckbox.value
+        })
+    })
+
+    /**
+     * 在光标处插入元素
+     * @param text 文字内容
+     * @param color 文字颜色
+     * @param underline 是否带有下划线
+     */
+    function insertSpan({text, color, underline}) {
+        if (window.getSelection) {
+            let sel = window.getSelection();
+            let range = sel.getRangeAt(0);
+            // 创建元素
+            let oSpan = document.createElement('span')
+            range.deleteContents()
+            oSpan.innerText = text
+            oSpan.style.color = color
+            oSpan.style.textDecoration = underline
+            // 整块选中/删除
+            oSpan.setAttribute('contenteditable', false)
+            range.insertNode(oSpan);
+            range.collapse(false); //对于IE来说，参数不可省略
+        }
+    }
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
