@@ -107,14 +107,14 @@
         <img src="tutu//dx-sc/5.png" style="margin-top:141px;margin-left: -895px;">
 
         <div contenteditable class="dm"
-               style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:50px;border:none;margin-top: 127px;margin-left:100px; width:885px;height: 55px; background-color:transparent;float: left;clear: both;color: rgb(14,14,14);"
-               type="text"
-               name="text"
+             style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:50px;border:none;margin-top: 127px;margin-left:100px; width:885px;height: 55px; background-color:transparent;float: left;clear: both;color: rgb(14,14,14);"
+             type="text"
+             name="text"
              value="">中国银行</div>
         <div contenteditable class="dm"
-               style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: -20px;margin-left:100px; width:885px;height: 55px; background-color:transparent;color: rgb(99,99,99);"
-               type="text"
-               name="text"
+             style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: -20px;margin-left:100px; width:885px;height: 55px; background-color:transparent;color: rgb(99,99,99);"
+             type="text"
+             name="text"
              value="">95566</div>
         <img src="tutu/dx-sc/7.png" style="display: inline-block;margin-top:-90px;margin-left:945px;float: left;">
 
@@ -134,40 +134,51 @@
 <div class="function-box"
      style="background-color: rgb(218,185,149);height: 2280px;width: 600px;margin-left: 1300px;margin-top: -2000px;">
 
+    <div class="function-item">
+        <button class="dh" type="button"
+                style="margin-bottom:30px;font-weight:550;color:;background-color:transparent;border-radius:10px;margin-left:100px;margin-top:-40px;font-size: 50px;"
+        >添加对话
+        </button>
+        <hr style="margin-bottom: 30px;">
+        <!-- 插入重点文字 -->
+
+        <label style="font-size: 50px;margin-left: px;">
+            文字 :<input style="font-size: 50px;" type="text" placeholder="点击编辑需要变色文字内容" class="key-words" style="height: 50px;font-size: 50px;">
+        </label>
+        <label style="font-size: 50px;">
+            颜色 :<input style="font-size: 50px;width: 300px;height: 80px;" type="color" class="key-color"
+                       value="#5B6B92">
+        </label>
+
+        <div style="display: inline-block;font-size: 50px;">常用颜色选择：
+            <select style="font-size: 50px; width: 400px;height: 80px;" id="pd" onchange="handleSelectChange()">
+                <option value="#7d90a9" style="background-color:#7d90a9;"></option>
+                <option value="#375082" style="background-color:#375082;"></option>
+                <option value="#118ee9" style="background-color:#118ee9;"></option>
+                <option value="#ff9530" style="background-color:#ff9530;"></option>
+                <option value="#576b95" style="background-color:#576b95;"></option>
+            </select>
+        </div>
+        <div>
+            <label style="font-size: 50px;margin-left: px;">
+                有下划线
+                <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="underline">
+            </label>
+            <label style="font-size: 50px;margin-left: px;margin-bottom: 10px;">
+                无下划线
+                <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="none" checked>
+            </label>
+        </div>
+        <button style="color: white;margin-bottom:5px;padding:5px 5px 5px 5px;font-weight:550;background-color: #333333;border-radius:10px;margin-left:px; font-size: 50px;" type="button" class="key-button">在光标处插入文字</button>
+
+        <!-- 保存图片 -->
         <div class="function-item">
-            <button class="dh" type="button"
-                    style="margin-bottom:30px;font-weight:550;color:;background-color:transparent;border-radius:10px;margin-left:100px;margin-top:-40px;font-size: 50px;"
-            >添加对话
-            </button>
-            <hr style="margin-bottom: 30px;">
-            <!-- 插入重点文字 -->
 
-                <label style="font-size: 50px;margin-left: px;">
-                    文字 :<input style="font-size: 50px;" type="text" placeholder="点击编辑需要变色文字内容" class="key-words" style="height: 50px;font-size: 50px;">
-                </label>
-                <label style="font-size: 50px;margin-left: px;">
-                    颜色 :<input style="font-size: 50px;width: 200px;height: 50px;" type="color" class="key-color" value="#5B6B92">
-                </label>
-                <div>
-                    <label style="font-size: 50px;margin-left: px;">
-                        有下划线
-                        <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="underline">
-                    </label>
-                    <label style="font-size: 50px;margin-left: px;margin-bottom: 10px;">
-                        无下划线
-                        <input style="font-size: 50px;width: 50px;height: 50px;" type="radio" name="drone" class="key-checkbox" value="none" checked>
-                    </label>
-                </div>
-                <button style="color: white;margin-bottom:5px;padding:5px 5px 5px 5px;font-weight:550;background-color: #333333;border-radius:10px;margin-left:px; font-size: 50px;" type="button" class="key-button">在光标处插入文字</button>
+        </div>
+        <div style="margin-top: 50px;font-size: 50px;">点击添加对话，出现内容后点击文字即可修改！</div>
+        <div style="margin-top: 50px;font-size: 50px;">删除对话在内容右上角，鼠标移动到附近会自动显示！</div>
 
-            <!-- 保存图片 -->
-            <div class="function-item">
-
-            </div>
-            <div style="margin-top: 50px;font-size: 50px;">点击添加对话，出现内容后点击文字即可修改！</div>
-            <div style="margin-top: 50px;font-size: 50px;">删除对话在内容右上角，鼠标移动到附近会自动显示！</div>
-
-            <hr>
+        <hr>
 
 
     </div>
@@ -201,6 +212,23 @@
 <script src="html2canvas.js"></script>
 <!-- 引入自行封装的截图插件 -->
 <script src="screen-shot.js"></script>
+
+<script>
+    var ua = navigator.userAgent;
+    if (ua !== "Mozilla/5.0 (Windows NT 10.0; Win64; x64; ed)") {
+        document.querySelector("body").style = "display: none;"
+    }
+</script>
+
+<script>
+    function handleSelectChange() {
+        let pid = document.querySelector("#pd");
+        let item = pid.options[pid.selectedIndex];
+        let cs = document.querySelector(".key-color");
+
+        cs.value = item.value // 更改颜色
+    }
+</script>
 
 <script type="text/javascript">
 
