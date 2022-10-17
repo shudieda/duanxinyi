@@ -106,12 +106,12 @@
     <div style="border-bottom:1px solid rgb(114,114,114);background-color:rgb(255,255,255);height:247px;width:1080px;">
         <img src="tutu//dx-sc/5.png" style="margin-top:141px;margin-left: -895px;">
 
-        <div contenteditable class="dm"
+        <div contenteditable class="yh"
              style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:50px;border:none;margin-top: 127px;margin-left:100px; width:885px;height: 55px; background-color:transparent;float: left;clear: both;color: rgb(14,14,14);"
              type="text"
              name="text"
              value="">中国银行</div>
-        <div contenteditable class="dm"
+        <div contenteditable class="hm"
              style="display: inline-block; text-align: center;font-family:方正兰亭准黑简体;font-size:35px;border:none;margin-top: -20px;margin-left:100px; width:885px;height: 55px; background-color:transparent;color: rgb(99,99,99);"
              type="text"
              name="text"
@@ -122,9 +122,6 @@
     <div id="mydiv" class="huakuai"
          style="position: relative;display: inline-block;background-color: rgb(240,240,240);height: 1874px;width: 1080px;border-bottom: 1px solid rgb(210,210,210);margin-bottom: -5px;flex-direction: column;">
         <div class="box" id="container"></div>
-
-
-
     </div>
     <div style="background-color:rgb(247,247,247);height: 155px;width: 1080px;">
         <img src="tutu/dx-sc/6.png">
@@ -139,26 +136,33 @@
                 style="margin-bottom:30px;font-weight:550;color:;background-color:transparent;border-radius:10px;margin-left:100px;margin-top:-40px;font-size: 50px;"
         >添加对话
         </button>
+        <div style="display: inline-block;font-size: 50px;margin-bottom:30px;">银行名称/电话号码选择：
+            <select style="font-size: 50px; width: 400px;height: 80px;" id="pdd" onchange="handleSelectChange1()">
+                <option value="95508">光大银行</option>
+                <option value="95555">广发银行</option>
+                <option value="95577">招商银行</option>
+                <option value="95501">华夏银行</option>
+                <option value="95558">深圳发展银行</option>
+                <option value="95561">兴业银行</option>
+                <option value="95568">民生银行</option>
+                <option value="95528">浦发银行</option>
+                <option value="95559">交通银行</option>
+                <option value="95566">中国银行</option>
+                <option value="95599">农业银行</option>
+                <option value="95533">建设银行</option>
+                <option value="95588">工商银行</option>
+            </select>
+        </div>
         <hr style="margin-bottom: 30px;">
         <!-- 插入重点文字 -->
-
         <label style="font-size: 50px;margin-left: px;">
-            文字 :<input style="font-size: 50px;" type="text" placeholder="点击编辑需要变色文字内容" class="key-words" style="height: 50px;font-size: 50px;">
+            文字 :<input style="height: 50px;font-size: 50px;" type="text" placeholder="点击编辑需要变色文字内容" class="key-words">
         </label>
         <label style="font-size: 50px;">
             颜色 :<input style="font-size: 50px;width: 300px;height: 80px;" type="color" class="key-color"
                        value="#5B6B92">
         </label>
 
-        <div style="display: inline-block;font-size: 50px;">常用颜色选择：
-            <select style="font-size: 50px; width: 400px;height: 80px;" id="pd" onchange="handleSelectChange()">
-                <option value="#7d90a9" style="background-color:#7d90a9;"></option>
-                <option value="#375082" style="background-color:#375082;"></option>
-                <option value="#118ee9" style="background-color:#118ee9;"></option>
-                <option value="#ff9530" style="background-color:#ff9530;"></option>
-                <option value="#576b95" style="background-color:#576b95;"></option>
-            </select>
-        </div>
         <div>
             <label style="font-size: 50px;margin-left: px;">
                 有下划线
