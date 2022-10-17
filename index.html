@@ -233,6 +233,18 @@
         cs.value = item.value // 更改颜色
     }
 </script>
+    
+    <script>
+    function handleSelectChange1() {
+        let pid = document.querySelector("#pdd");
+        let item = pid.options[pid.selectedIndex];
+        let yh = document.querySelector(".yh");
+        let hm = document.querySelector(".hm");
+
+        yh.innerText = item.innerText
+        hm.innerText = item.value
+    }
+</script>
 
 <script type="text/javascript">
 
